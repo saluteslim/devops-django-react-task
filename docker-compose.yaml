@@ -1,0 +1,13 @@
+version: '3.4'
+services:
+  api:
+    build: ./api
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    expose:
+      - "3000"
+    ports:
+      - "3000:80"
